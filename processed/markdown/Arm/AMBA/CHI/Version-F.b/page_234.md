@@ -1,0 +1,1 @@
+> **_NOTE:_** Sequences of silent transitions can also occur. Any silent transition that results in the cache line being in UD, UDP, or SC state can undergo a further silent transition.

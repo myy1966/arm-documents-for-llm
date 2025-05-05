@@ -1,0 +1,53 @@
+## B13.10 Protocol flit fields
+
+A Protocol flit is identified by a non-0 value in the opcode field. All the flit fields defined in this section are applicable for a Protocol flit. The following sections describe the encoding of the Protocol flit fields:
+
+- B13.10.1 Quality of Service, QoS
+- B13.10.2 Target Identifier, TgtID
+- B13.10.3 Source Identifier, SrcID
+- B13.10.4 Home Node Identifier, HomeNID
+- B13.10.5 Return Node Identifier, ReturnNID
+- B13.10.6 Forward Node Identifier, FwdNID
+- B13.10.7 Logical Processor Identifier, LPID
+- B13.10.8 Persistence Group Identifier, PGroupID
+- B13.10.9 Stash Node Identifier, StashNID
+- B13.10.10 Stash Node Identifier Valid, StashNIDValid
+- B13.10.11 Stash Logical Processor Identifier, StashLPID
+- B13.10.12 Stash Logical Processor Identifier Valid, StashLPIDValid
+- B13.10.13 Stash Group Identifier, StashGroupID
+- B13.10.14 Transaction Identifier, TxnID
+- B13.10.15 Return Transaction Identifier, ReturnTxnID
+- B13.10.16 Forwarding Transaction Identifier, FwdTxnID
+- B13.10.17 Data Buffer Identifier, DBID
+- B13.10.18 Channel opcodes, Opcode
+- B13.10.19 Deep persistence, Deep
+- B13.10.20 Address, Addr
+- B13.10.21 Non-secure, NS
+- B13.10.22 Non-secure extension, NSE
+- B13.10.23 Size of transaction data, Size
+- B13.10.24 Memory Attribute, MemAttr
+- B13.10.25 Snoop Attribute, SnpAttr
+- B13.10.26 Do Direct Write Transfer, DoDWT
+- B13.10.27 Likely Shared, LikelyShared
+- B13.10.28 Ordering requirements, Order
+- B13.10.29 Exclusive, Excl
+- B13.10.30 CopyAtHome, CAH
+- B13.10.31 Page-based Hardware Attribute, PBHA
+- B13.10.32 Endian
+- B13.10.33 Allow Retry, AllowRetry
+- B13.10.34 Expect Completion Acknowledge, ExpCompAck
+- B13.10.35 SnoopMe
+- B13.10.36 Return to Source, RetToSrc
+- B13.10.37 Data Pull, DataPull
+- B13.10.38 Do not transition to SD state, DoNotGoToSD
+- B13.10.39 Protocol Credit Type, PCrdType
+- B13.10.40 Tag Operation, TagOp
+- B13.10.41 Tag
+- B13.10.43 Tag Group Identifier, TagGroupID
+- B13.10.44 Trace Tag, TraceTag
+- B13.10.45 Memory System Resource Partitioning and Monitoring, MPAM
+- B13.10.46 Virtual Machine Identifier Extension, VMIDExt
+- B13.10.47 Response Error, RespErr
+- B13.10.48 Response status, Resp
+- B13.10.49 Forward State, FwdState
+- B13.10.50 Completer Busy, CBusy

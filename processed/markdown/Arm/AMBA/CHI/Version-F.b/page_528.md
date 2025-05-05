@@ -1,0 +1,25 @@
+| Change                                                                                                                                          | Location                                                       |
+|-------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------|
+|                                                                                                                                                 | B4.2.2.1 Cache Maintenance transactions                        |
+|                                                                                                                                                 | B5.2.3 Persistent CMO with snoop and separate Comp and Persist |
+|                                                                                                                                                 | B16.1 Interface properties and parameters                      |
+|                                                                                                                                                 | B9.1.4.2 Dataless transactions                                 |
+| New feature: Deep Persistent cache maintenance                                                                                                  | B4.2.2.1 Cache Maintenance transactions                        |
+|                                                                                                                                                 | B13.10.19 Deep persistence, Deep                               |
+| New feature: Interface parity                                                                                                                   | B9.3 Use of interface parity                                   |
+|                                                                                                                                                 | B16.1 Interface properties and parameters                      |
+| New feature: Memory System Resource Partitioning and                                                                                            | B11.4 MPAM                                                     |
+|                                                                                                                                                 | B16.1 Interface properties and parameters                      |
+| New feature: Completer Busy                                                                                                                     | B11.6 Completer Busy                                           |
+| New feature: ICache Invalidation broadcast signal                                                                                               | B16.2 Optional interface broadcast signals                     |
+| Additional requirement: Concerning SACTIVE synchronization to CLK                                                                               | B14.7 Protocol layer activity indication                       |
+| Additional requirement: Concerning SYSCOREQ SYSCOACK synchronization to CLK                                                                     | Chapter B15 System Coherency Interface                         |
+| Correction: Concerning the use of RXSACTIVE to directly generate the TXSACTIVE signal                                                           | B14.7.2 TXSACTIVE signal                                       |
+| Update: Concerning Ordered Write Observation flow enhancements                                                                                  | B2.6.5.3 Streaming Ordered Write transactions                  |
+| Update: Concerning the relaxation of the order requirement between Cache Maintenance transactions and any other transaction to the same address | B4.2.2.1 Cache Maintenance transactions                        |
+| Updare: Concerning UD_PD state is permitted on a DataSepResp response                                                                           | B4.5.1.1 Read and Atomic transaction completion                |
+| Update: Concerning DVM early Comp                                                                                                               | B8.2.1.1 DVM early Comp for Non-sync DVMOps                    |
+| Update: Concerning increased TxnID width                                                                                                        | B13.9 Flit packet definitions                                  |
+| Clarification: Regarding when a RespSepData response includes a NDERR                                                                           | B9.1.4.1 Read transactions                                     |
+
+Continued on next page

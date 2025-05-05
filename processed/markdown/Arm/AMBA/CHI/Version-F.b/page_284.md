@@ -1,0 +1,1 @@
+> **_NOTE:_** The cache state at the Requester must change to Invalid before the Evict message is sent.

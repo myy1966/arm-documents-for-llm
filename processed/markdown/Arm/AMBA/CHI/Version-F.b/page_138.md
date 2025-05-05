@@ -1,0 +1,2 @@
+8. The RN-I sends a CompAck response for the WriteUnique-A transaction when it is ready to make the write observable.
+9. The RN-I sends a CompAck response for the WriteUnique-B transaction when it is ready to make the write observable.

@@ -1,0 +1,2 @@
+    - Update. All TU bits must be asserted. The data state must include Pass Dirty.
+    - Match. Not permitted.

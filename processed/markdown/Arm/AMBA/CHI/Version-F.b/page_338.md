@@ -1,0 +1,12 @@
+Table B8.5 – Continued from previous page
+
+| Field    | Bits  | Function                                                                                                                                                                                                                                                        |
+|----------|-------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| TG ᵇ     | 2     | Translation Granule (TG)  </br> For non-range TLB Invalidations, TG and TTL indicate the table level hint, see Table B8.7. </br> For TLB Invalidations by range, TG indicates the granule size: </br> 0b00 Reserved </br> 0b01 4K </br> 0b10 16K </br> 0b11 64K |
+| BaseAddr | 37-41 | Shifted base address of the range, shifted based on TG: </br> 4K  BaseAddr is VA[MaxVA:12] </br> 16K BaseAddr is VA[MaxVA:14], VA[13:12] must be set to zero </br> 64K BaseAddr is VA[MaxVA:16], VA[15:12] must be set to zero                                  |
+| VA or    | 49-53 | Virtual Address                                                                                                                                                                                                                                                 |
+| PA       | 44-52 | Physical Address                                                                                                                                                                                                                                                |
+| VI       | 16    | Virtual Index                                                                                                                                                                                                                                                   |
+| VMIDExt  | 8     | Virtual Machine Identifier VMID[15:8]                                                                                                                                                                                                                           |
+
+Continued on next page

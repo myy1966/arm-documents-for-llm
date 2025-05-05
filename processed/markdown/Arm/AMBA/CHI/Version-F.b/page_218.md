@@ -1,0 +1,11 @@
+    - For ReadNotSharedDirty, ReadShared, and ReadClean transactions, use SnpNotSharedDirty or SnpShared or SnpClean.
+    - For ReadShared transactions, use SnpNotSharedDirtyFwd or SnpSharedFwd or SnpCleanFwd.
+    - For ReadNotSharedDirty and ReadClean transactions, use SnpNotSharedDirtyFwd or SnpCleanFwd.
+    - For the ReadOnce transactions, use any Non-forwarding, Non-invalidating snoop types.
+    - For the ReadOnceCleanInvalid and ReadOnceMakeInvalid transactions, use any Non-forwarding snoop types except SnpMakeInvalid.
+    - For the ReadOnce and ReadOnceCleanInvalid transactions, use Forwarding snoop type SnpOnceFwd.
+    - For ReadOnceMakeInvalid transactions, use Forwarding snoop type SnpUniqueFwd or SnpOnceFwd.
+    - For WriteUniqueFullStash and WriteUniquePtlStash transactions, send SnpStashUnique or SnpMakeInvalidStash to the target Request Node if the target Request Node does not have the cache line.
+    - Replace any Invalidating snoop request by the SnpUnique or SnpCleanInvalid request.
+    - Replace any Forwarding snoop with a corresponding non-Forwarding type. The receiver is permitted to treat the forward indication as a hint and respond to the snoop with a corresponding non-Forwarding version in a protocol-compliant manner. This is permitted irrespective of the use of MTE. Forwarding snoops must not be used for requests of less than 64B.
+    - Use of SnpMakeInvalid for MakeInvalid and WriteUniqueZero is permitted only when the Home knows that the Snoopee does not have Dirty tags.

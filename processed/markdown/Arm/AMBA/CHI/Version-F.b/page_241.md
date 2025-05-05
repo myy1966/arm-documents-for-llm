@@ -1,0 +1,1 @@
+- The column labeled: Snoop Filter - Imprecise or Absent, covers the cases when the precise state of the cache line at the Requester, at the response time, is not known. This also includes the case when there is no snoop filter, or the Home could decide to ignore the available precise information, or not attempt to obtain the information.

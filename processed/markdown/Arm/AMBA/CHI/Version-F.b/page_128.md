@@ -1,0 +1,24 @@
+| Transaction              | Location | Response               | Outcome                                                                                                                                                                                                                                                                                                        |
+|--------------------------|----------|------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| CleanSharedPersist       |          | Comp                   | Any data written earlier to the same memory location is made persistent.                                                                                                                                                                                                                                       |
+| CleanInvalidPoPA         |          | Comp                   | The transaction is observable to a later transaction from any agent to the same memory location in any PAS. Additional Cache Maintenance Operations could be required in the other Physical Address Spaces to ensure any data written earlier is fully visible to those Physical Address Spaces.               |
+| Combined Write           |          | CompCMO (non-PoPA CMO) | CMO, PCMO, and write operations are observable to a later transaction from any agent to the same memory location.                                                                                                                                                                                              |
+| Combined Write           |          | CompCMO (PoPA CMO)     | CMOand write operations are observable to a later transaction from any agent to the same memory location in any PAS. Additional Cache Maintenance Operations could be required in the other Physical Address Spaces to ensure that any data written earlier is fully visible to those Physical Address Spaces. |
+| Combined Write           |          | Comp                   | See outcome of Comp for Write transaction within this table.                                                                                                                                                                                                                                                   |
+| CleanSharedPersistSep    |          | Persist                | The data written earlier to the same memory location is made persistent.                                                                                                                                                                                                                                       |
+| Combined Write with PCMO |          | Persist                | The data write in the Combined Write is made persistent. All earlier writes on the same line are also made persistent.                                                                                                                                                                                         |
+| StashOnceSep             |          | Comp                   | The Completer accepts the request and does not send a RetryAck response.                                                                                                                                                                                                                                       |
+| StashOnceSep             |          | StashDone              | The transaction is observable to a later transaction from any agent to the same memory location.                                                                                                                                                                                                               |
+
+> **_NOTE:_** The size of the endpoint address range is IMPLEMENTATION DEFINED.
+
+In a combined Ordered Write Observation (OWO) Write request, if the write is canceled and the Requester sends a WriteDataCancel, the required cache maintenance on the write data is not carried out. The Requester must resend both the Write request and the CMO:
+
+- If a Write with PCMO had its write canceled:
+
+    - The Persist response for the combined request does not indicate that the write data is made persistent.
+    - The Requester must resend the PCMO either combined with the resent Write request or after the resent Write request succeeds.
+
+- If a Write with CMO had its write canceled:
+
+    - The Requester must resend the CMO, either combined with the re-sent Write request or after the resent Write request succeeds.
